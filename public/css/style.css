@@ -8,39 +8,19 @@
     --success: #009432;
     --font-family: 'Open Sans', sans-serif;
     --box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
-    0 1px 3px 1px rgb(60 64 67 / 15%);
+        0 1px 3px 1px rgb(60 64 67 / 15%);
     --border-radius: 3px;
     --gray-light: #ecf0f1;
     --border: 1px solid var(--gray-light);
     --color: #636466;
     --color-dark: #444;
+    --color-primary: white;
     --gray: #636466;
     --gray-dark: #444;
     --max-width: 1200px;
 }
 
-/* debug */
-
-.b1 {
-    background-color: red;
-}
-
-.b2{
-    background-color: blue;
-}
-
-.b3{
-    background-color: yellow;
-}
-
-.b4{
-    background-color: orange;
-}
-
-.b5{
-    background-color: green;}
-
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -64,7 +44,7 @@ h5 {
     color: var(--color-dark);
 }
 
-  /* flex */
+/* flex */
 
 .d-flex {
     display: flex;
@@ -106,10 +86,14 @@ h5 {
     flex: 1;
 }
 
-  /* margin */
+/* margin */
 
 .m-5 {
     margin: 5px;
+}
+
+.mr-5 {
+    margin-right: 5px;
 }
 
 .m-10 {
@@ -120,7 +104,7 @@ h5 {
     margin: 20px;
 }
 
-  /* padding */
+/* padding */
 
 .p-5 {
     padding: 5px;
@@ -138,11 +122,65 @@ h5 {
 
 .content {
     max-width: var(--max-width);
+}
 
+.btn {
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transition: opacity 0.4s;
+}
+
+.btn-small {
+    padding: 5px 15px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.btn-primary-stroke {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: white;
 }
 
 /* sidebar */
 
-.sidebar{
+.sidebar {
     min-width: 200px;
+}
+
+/* header */
+
+header {
+    box-shadow: var(--box-shadow);
+}
+
+.header-search {
+    border-radius: var(--border-radius);
+    background-color: var(--gray-light);
+    max-width: 400px;
+}
+
+.header-search input {
+    border: 0;
+    outline: 0;
+    background-color: var(--gray-light);
+}
+
+.header-logo {
+    width: 150px;
+}
+
+.header-logo img {
+    max-width: 50px;
 }
