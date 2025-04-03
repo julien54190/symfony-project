@@ -35,19 +35,12 @@ final class QuestionController extends AbstractController
         ]);
     }
     #[Route('/question/{id}', name: 'question_show')]
-    public function show(Request $request, string $id ): Response {
+    public function show(Question $question): Response {
 
-    $question =  [
-        'title' => 'How to become a web developer?',
-        'content' => 'I want to become a web developer. What should I do first?',
-        'rating' => 20,
-        'author' => [
-            'name' => 'John Doe',
-            'avatar' => 'https://randomuser.me/api/portraits/men/36.jpg',
-        ],
-        'nbrOfReponses' => 15
-        
-    ];
+
+            // 'name' => 'John Doe',
+            // 'avatar' => 'https://randomuser.me/api/portraits/men/36.jpg',
+
 
         return $this->render('question/show.html.twig', [
             'question' => $question,
