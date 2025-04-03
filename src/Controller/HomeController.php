@@ -13,6 +13,7 @@ final class HomeController extends AbstractController
     {
         $question = [
             [
+                'id' => '1',
                 'title' => 'How to become a web developer?',
                 'content' => 'I want to become a web developer. What should I do first?',
                 'rating' => 20,
@@ -24,6 +25,7 @@ final class HomeController extends AbstractController
                 
             ],
             [
+                'id' => '2',
                 'title' => 'How to become a mobile developer?',
                 'content' => 'I want to become a mobile developer. What should I do first?',
                 'rating' => 0,
@@ -34,6 +36,7 @@ final class HomeController extends AbstractController
                 'nbrOfReponses' => 10
             ],
             [
+                'id' => '3',
                 'title' => 'How to become a data scientist?',
                 'content' => 'I want to become a data scientist. What should I do first?',
                 'rating' => -10,
