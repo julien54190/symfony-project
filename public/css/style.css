@@ -80,6 +80,10 @@ small{
     font-family: var(--font-family);
 }
 
+.w-100 {
+    width: 100%;
+}
+
 /* flex */
 
 .d-flex {
@@ -100,6 +104,10 @@ small{
 
 .align-items-center {
     align-items: center;
+}
+
+.align-items-between {
+    align-items: space-between;
 }
 
 .align-items-end {
@@ -126,6 +134,18 @@ small{
 
 .ml-auto{
     margin-left: auto;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.ml-0{
+    margin-left: 0;
+}
+
+.mr-10{
+    margin-right: 10px;
 }
 
 .mr-auto{
