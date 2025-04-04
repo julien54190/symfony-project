@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="{{ asset('css/question_show.css') }}">
 {% endblock %}
 
+
 {% block title %}
 	{{ question.title }}
 {% endblock %}
@@ -12,7 +13,7 @@
 {% block body %}
 	<div class="block">
 		<div class="d-flex flex-row-nowrap">
-			{% include "partials/_rating.html.twig" with { rating: question.rating } %}
+			{% include "partials/_rating.html.twig" with { rating: question.rating, from: 'question', id: question.id } %}
 			<div class="d-flex flex-column">
 				<div class="d-flex flex-row-nowrap align-items-center pb-30">
 					<h3 class="mr-10">{{ question.title }}</h3>
@@ -23,16 +24,14 @@
 				<div class="separator"></div>
 				{% for comment in question.comments %}
 					<div class="d-flex flex-row-nowrap mb-20">
-						{% include "partials/_rating.html.twig" with { rating: comment.rating} %}
+						{% include "partials/_rating.html.twig" with { rating: comment.rating, from: 'comment', id: comment.id} %}
 						<div class="mb-20">
 							<div class="d-flex flex-row-nowrap align-items-center pb-10">
 								<img class="avatar mr-10" src="https://randomuser.me/api/portraits/men/51.jpg">
-								<p class="clickable mr-10">Jean Louis</p>
-                                <div class="question-tag">REPONSE</div>
+								<p class="clickable">Jean Louis</p>
 								<small class="ml-auto">12/12/21</small>
 							</div>
 							<p class="question-response-text">{{ comment.content }}</p>
-                            <div class="separator"></div>
 						</div>
 					</div>
 				{% endfor %}
@@ -47,4 +46,5 @@
 			</div>
 		</div>
 	</div>
+
 {% endblock %}
