@@ -23,13 +23,13 @@ class UserController extends AbstractController
         if ($currentUser === $user) {
             return $this->redirectToRoute('current_user');
         }
-        return $this->render('user/index.html.twig', [
-            'controller_name' => 'UserController'
+        return $this->render('user/show.html.twig', [
+            'user' => $user
         ]);
     }
 
     #[Route('/user', name: 'current_user')]
-    #[IsGranted('IS_AUTHENTICATED_FULLY')]
+    #[IsGranted('ROLE_USER')]
     public function currentUserProfile(Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $passwordHasher): Response
     {
         /** @var \App\Entity\User $user */
