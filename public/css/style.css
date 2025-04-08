@@ -305,6 +305,10 @@ small{
     object-fit: cover;
 }
 
+.avatar-lg{
+    width: 40px;
+}
+
 .clickable{
     color: var(--primary);
     font-weight: var(--font-weight-semi-bold);
@@ -408,4 +412,11 @@ footer {
 
 .rating-down{
     color: var(--warning);
+}
+
+/* question text */
+
+.question-text, .comment-response-text{
+    line-height: var(--line-height-hight);
+    white-space: pre-wrap;
 }

@@ -7,7 +7,10 @@
         <h2 class="mb-20">Inscription</h2>
         {{ form_start(form) }}
         {{ form_rest(form) }}
-        <button class="btn btn-primary">S'inscrire</button>
+        <button class="btn btn-primary mr-10">S'inscrire</button>
+        <small>
+            <a href="{{ path('login')}}">Vous avez déja un compte?</a>
+        </small>
         {{ form_end(form) }}
     </div>
 
